@@ -1,0 +1,32 @@
+int leitura;
+
+
+
+void setup()
+{
+
+
+  pinMode(7, INPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  Serial.begin(9600);
+}
+
+
+void loop()
+{
+  leitura = digitalRead(7);
+  
+  if (leitura == LOW){
+    
+    digitalWrite(8, LOW);
+    digitalWrite(9, HIGH);
+    Serial.println("Luz Vermelha Ligada");
+  }
+   
+  if (leitura == HIGH){
+    digitalWrite(9, LOW);
+    digitalWrite(8, HIGH);
+Serial.println("Luz Azul Ligada");
+  } 
+}
