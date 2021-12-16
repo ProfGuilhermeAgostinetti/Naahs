@@ -1,0 +1,27 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 13, 4, 5, 6, 7);
+
+void setup()
+{
+ lcd.begin(16, 2); 
+}
+
+void loop()
+{
+ 
+  lcd.setCursor(1,0);
+  lcd.print(" Robotica ");
+  delay(1000);
+  
+  lcd.setCursor(2,0);
+  lcd.print(" Robotica  ");
+  delay(1000);
+  
+  lcd.setCursor(3,0);
+  lcd.print("  Robotica");
+  delay(1000);
+  
+  
+  
+}
