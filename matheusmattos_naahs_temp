@@ -1,0 +1,27 @@
+int temperatura;
+
+
+void setup()
+{
+  pinMode(6,OUTPUT); 
+  pinMode(5,OUTPUT);
+  pinMode(4,OUTPUT);
+  
+  Serial.begin(9600);
+  
+}
+
+
+
+
+void loop()
+{ 
+ temperatura = int((float(analogRead(A0))*5/(1024.0))/0.01); 
+ temperatura = temperatura-49; 
+  
+  
+  Serial.println(temperatura);
+  
+  
+               
+}
