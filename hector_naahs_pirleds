@@ -1,0 +1,47 @@
+int tempo = 100;
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, INPUT);
+}
+
+void loop()
+{
+  if(digitalRead(8) == HIGH){
+  digitalWrite(2, HIGH);
+  delay(tempo); 
+  digitalWrite(2, LOW);
+  delay(tempo); 
+  
+  digitalWrite(3, HIGH);
+  delay(tempo); 
+  digitalWrite(3, LOW);
+  delay(tempo); 
+  
+  digitalWrite(4, HIGH);
+  delay(tempo); 
+  digitalWrite(4, LOW);
+  delay(tempo); 
+  
+  digitalWrite(5, HIGH);
+  delay(tempo); 
+  digitalWrite(5, LOW);
+  delay(tempo); 
+    
+  digitalWrite(6, HIGH);
+  delay(tempo); 
+  digitalWrite(6, LOW);
+  delay(tempo); 
+  
+  digitalWrite(7, HIGH);
+  delay(tempo); 
+  digitalWrite(7, LOW);
+    delay(tempo); }
+}
+  
