@@ -1,0 +1,34 @@
+#include <IRremote.h>
+int const PINO_RECEPTOR = 11;
+int LED_VERMELHO = 10;
+int LED = 0;
+
+IRrecv receptor(PINO_RECEPTOR);
+
+decode_results valorSaida;
+
+ 
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(LED_VERMELHO, OUTPUT);
+  receptor.enableIRIn(); 
+}
+
+void loop(){
+ if (receptor.decode(&valorSaida)) {
+  receptor.resume(); 
+    
+    if ((valorSaida.value == 0xFD08F7) &&(LED ==0)){
+      digitalWrite(LED_VERMELHO, HIGH);
+      LED = 1;
+    } else {
+      if ((valorSaida.value == 0xFD08F7) && (LED=1)){
+      digitalWrite(LED_VERMELHO, LOW);
+        LED = 0;}
+   }
+             
+    delay(1000);
+                   }
+  }
