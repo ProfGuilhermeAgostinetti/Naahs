@@ -1,0 +1,51 @@
+
+int vermelho = 8;
+int azul = 7;
+int amarelo = 6;
+int verde = 5;
+int tempo = 150;
+
+
+void setup()
+{
+ pinMode(vermelho, OUTPUT);
+  pinMode(azul, OUTPUT);
+  pinMode(amarelo, OUTPUT);
+  pinMode(verde, OUTPUT);
+}
+
+void loop()
+{
+ 
+  ledvermelho();
+  ledazul();
+  ledazul();
+  ledverde();
+  ledamarelo();
+  ledverde();
+  ledamarelo();
+}
+void ledvermelho(){
+  digitalWrite(vermelho, HIGH);
+  delay(tempo);
+  digitalWrite(vermelho, LOW);
+  delay(tempo);
+}
+void ledazul(){
+  digitalWrite(azul, HIGH);
+  delay(tempo);
+  digitalWrite(azul, LOW);
+  delay(tempo); 
+}
+void ledamarelo(){
+  digitalWrite(amarelo, HIGH);
+  delay(tempo);
+  digitalWrite(amarelo, LOW);
+  delay(tempo);
+}
+void ledverde(){
+  digitalWrite(verde, HIGH);
+  delay(tempo);
+  digitalWrite(verde, LOW);
+  delay(tempo);
+}
