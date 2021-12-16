@@ -1,0 +1,19 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 13, 4, 5, 6, 7);
+
+byte person[8] = {B01110,B01010,B01110,B00100,B11111,B00100,B01010,B10001,
+};
+
+
+void setup()
+{
+  lcd.begin(16, 2);
+  lcd.createChar(1, person);
+}
+
+void loop()
+{
+  lcd.setCursor(0,0);
+  lcd.write(1);
+}
